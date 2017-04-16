@@ -19,9 +19,11 @@
 
 public abstract class Privacy.AbstractBackend {
     public abstract string ICON_NAME { get; }
+
     public abstract signal void activated ();
     public abstract signal void deactivated ();
+    public abstract signal void apps_changed ();
 
-    public abstract void get_menu_items ();
+    public abstract Gtk.Widget get_app_list ();
     public abstract void added ();
 }
