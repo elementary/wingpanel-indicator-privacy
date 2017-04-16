@@ -23,14 +23,23 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
     public override void get_menu_items () { }
 
     public override void added () {
-        Timeout.add (3000, () => {
-            activated ();
-            return false;
+        Timeout.add (1000, () => {
+            if (check_camera_in_use ()) {
+                activated ();
+            } else {
+                deactivated ();
+            }
+            return true;
         });
+    }
 
-        Timeout.add (7000, () => {
-            deactivated ();
+    private bool check_camera_in_use () {
+        string standard_output;
+        Process.spawn_command_line_sync ("lsof /dev/video0", out standard_output);
+        if (standard_output.length == 0) {
             return false;
-        });
+        } else {
+            return true;
+        }
     }
 }

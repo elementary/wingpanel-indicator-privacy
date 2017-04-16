@@ -20,20 +20,6 @@ public class Privacy.Widgets.DisplayWidget : Gtk.Box {
 
     public signal void visibility_changed ();
 
-    private int _visible_icons;
-    private int visible_icons { 
-        get {
-            return _visible_icons;
-        } 
-        set {
-            _visible_icons = value;
-            update_padding ();
-            if (_visible_icons <= 1) {
-                visibility_changed ();
-            }
-        }
-    }
-
     private Gee.ArrayList<Gtk.Revealer> revealers;
 
     construct {
@@ -54,19 +40,26 @@ public class Privacy.Widgets.DisplayWidget : Gtk.Box {
 
         backend.activated.connect (() => {
             revealer.set_reveal_child (true);
-            visible_icons++;
+            visibility_changed ();
+            update_padding ();
         });
 
         backend.deactivated.connect (() => {
             revealer.set_reveal_child (false);
-            visible_icons--;
+            visibility_changed ();
+            update_padding ();
         });
 
         backend.added ();
     }
 
     public bool has_visible_icons () {
-        return visible_icons > 0;
+        foreach (var revealer in revealers) {
+            if (revealer.get_reveal_child ()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void update_padding () {
