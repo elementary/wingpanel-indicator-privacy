@@ -1,6 +1,8 @@
 # Wingpanel Privacy Indicator
 [![l10n](https://l10n.elementary.io/widgets/wingpanel/wingpanel-indicator-privacy/svg-badge.svg)](https://l10n.elementary.io/projects/wingpanel/wingpanel-indicator-privacy)
 
+**N.B:** This is still work in progress and not all features are working/complete yet.
+
 ## Building and Installation
 
 It's recommended to create a clean build environment
