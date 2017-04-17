@@ -23,8 +23,7 @@ public class Privacy.Widgets.AppList : Gtk.Revealer {
     private Gee.HashSet<AppInfo> app_list;
 
     public AppList (string title) {
-        hexpand = true;
-        main_grid = new Gtk.Grid ();        
+        main_grid = new Gtk.Grid ();
         main_grid.orientation = Gtk.Orientation.VERTICAL;
         app_list = new Gee.HashSet<AppInfo>((v) => {
             return v.get_id ().hash ();
@@ -54,6 +53,7 @@ public class Privacy.Widgets.AppList : Gtk.Revealer {
         title_label.margin_start = 12;
         title_label.margin_end = 12;
         title_label.margin_bottom = 6;
+        title_label.hexpand = true;
 
         main_grid.add (title_label);
 

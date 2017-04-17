@@ -83,7 +83,8 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
         string exec = parts[parts.length - 1];
         var all_apps = AppInfo.get_all ();
         foreach (var app in all_apps) {
-            if (exec in app.get_executable ()) {
+            var exec_path = app.get_executable ();
+            if (exec_path != null && exec in exec_path) {
                 return app;
             }
         }
