@@ -19,7 +19,7 @@
 
 public class Privacy.Backends.Camera : Privacy.AbstractBackend {
     public override string ICON_NAME { get { return "camera-video-symbolic"; } }
-    private const string BACKEND_NAME = "Camera";
+    private const string BACKEND_NAME = _("Camera");
 
     private Widgets.AppList app_list_widget;
     private bool icon_visible = false;
@@ -36,7 +36,9 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
     public override void added () {
         Timeout.add (1000, () => {
             bool in_use = check_camera_in_use ();
-            update_app_list ();
+            if (in_use) {
+                update_app_list ();
+            }
             if (!icon_visible && in_use) {
                 activated ();
                 icon_visible = true;
