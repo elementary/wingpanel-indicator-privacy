@@ -19,7 +19,7 @@
 
 public class Privacy.Backends.Location : Privacy.AbstractBackend {
     public override string ICON_NAME { get { return "find-location-symbolic"; } }
-    private const string BACKEND_NAME = "Location";
+    private const string BACKEND_NAME = _("Location");
 
     public override Gtk.Widget get_app_list () {
         return new Widgets.AppList (BACKEND_NAME);

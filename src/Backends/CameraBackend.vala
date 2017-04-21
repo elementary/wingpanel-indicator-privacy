@@ -19,7 +19,7 @@
 
 public class Privacy.Backends.Camera : Privacy.AbstractBackend {
     public override string ICON_NAME { get { return "camera-video-symbolic"; } }
-    private const string BACKEND_NAME = "Camera";
+    private const string BACKEND_NAME = _("Camera");
 
     private Widgets.AppList app_list_widget;
     private bool icon_visible = false;
@@ -36,7 +36,9 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
     public override void added () {
         Timeout.add (1000, () => {
             bool in_use = check_camera_in_use ();
-            update_app_list ();
+            if (in_use) {
+                update_app_list ();
+            }
             if (!icon_visible && in_use) {
                 activated ();
                 icon_visible = true;
@@ -79,14 +81,45 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
 
     private AppInfo? get_app_info_from_pid (string pid) {
         var path = FileUtils.read_link ("/proc/%s/exe".printf (pid));
-        var parts = path.split ("/");
-        string exec = parts[parts.length - 1];
         var all_apps = AppInfo.get_all ();
+        // Check to see if we can get an exact explicit path match
         foreach (var app in all_apps) {
-            if (exec in app.get_executable ()) {
-                return app;
+            var exec_path = app.get_executable ();
+            if (exec_path != null) {
+                if (!exec_path.has_prefix ("/")) {
+                    exec_path = get_full_exec_path (exec_path);
+                }
+                if (exec_path.has_prefix (path)) {
+                    return app;
+                }
+            }
+        }
+        // If explicit path fails, try and find an executable with same name
+        foreach (var app in all_apps) {
+            var exec_path = app.get_executable ().split ("/");
+            if (exec_path != null) {
+                var exec = exec_path[exec_path.length - 1].split (" ")[0];
+                var pid_name_parts = path.split ("/");
+                var pid_name = pid_name_parts[pid_name_parts.length - 1];
+                if (exec == pid_name) {
+                    return app;
+                }
             }
         }
         return null;
+    }
+
+    // This is the equivalent of the 'which' helper built into UNIX shells.
+    private string get_full_exec_path (string exec) {
+        var env_path = Environ.get_variable (Environ.@get (), "PATH");
+        var paths = env_path.split (":");
+        foreach (var path in paths) {
+            var possible_exec = Path.build_path (Path.DIR_SEPARATOR_S, path, exec);
+            var is_exec = FileUtils.test (possible_exec, FileTest.IS_EXECUTABLE);
+	        if (is_exec) {
+                return possible_exec;
+            }
+        }
+        return "";
     }
 }

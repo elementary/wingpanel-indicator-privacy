@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-17 01:33+0200\n"
+"POT-Creation-Date: 2017-04-21 01:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/Widgets/AppList.vala:51
+#: ../src/Widgets/AppList.vala:50
 msgid "Apps Using %s"
 msgstr ""
 
@@ -31,4 +31,12 @@ msgstr ""
 
 #: ../src/Indicator.vala:64
 msgid "Privacy Settings…"
+msgstr ""
+
+#: ../src/Backends/LocationBackend.vala:22
+msgid "Location"
+msgstr ""
+
+#: ../src/Backends/CameraBackend.vala:22
+msgid "Camera"
 msgstr ""
