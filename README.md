@@ -9,6 +9,7 @@ You'll need the following dependencies:
 
 * cmake
 * libgtk-3-dev
+* libwingpanel-2.0-dev
 * valac
 
 It's recommended to create a clean build environment
