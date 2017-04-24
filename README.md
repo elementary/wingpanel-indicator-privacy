@@ -8,6 +8,7 @@
 You'll need the following dependencies:
 
 * cmake
+* libgee-0.8-dev
 * libgtk-3-dev
 * libwingpanel-2.0-dev
 * valac
