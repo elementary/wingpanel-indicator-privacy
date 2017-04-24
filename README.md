@@ -5,6 +5,12 @@
 
 ## Building and Installation
 
+You'll need the following dependencies:
+
+* cmake
+* libgtk-3-dev
+* valac
+
 It's recommended to create a clean build environment
 
     mkdir build
