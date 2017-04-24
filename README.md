@@ -5,6 +5,14 @@
 
 ## Building and Installation
 
+You'll need the following dependencies:
+
+* cmake
+* libgee-0.8-dev
+* libgtk-3-dev
+* libwingpanel-2.0-dev
+* valac
+
 It's recommended to create a clean build environment
 
     mkdir build
