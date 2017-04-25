@@ -4,7 +4,7 @@ services:
  - docker
 
 env:
- - DEPENDENCY_PACKAGES="cmake libgee-0.8-dev libgtk-3-dev libwingpanel-2.0-dev valac"
+ - DEPENDENCY_PACKAGES="cmake libgee-0.8-dev libgtk-3-dev libwingpanel-2.0-dev valac libbamf3 libgtop-2.0"
 
 install:
  - docker pull elementary/docker:loki
