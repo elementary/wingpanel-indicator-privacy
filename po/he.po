@@ -1,22 +1,38 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-17 01:33+0200\n"
+"POT-Creation-Date: 2017-04-21 01:51+0100\n"
+"PO-Revision-Date: 2017-04-25 22:43+0000\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <https://l10n.elementary.io/projects/wingpanel"
+"/wingpanel-indicator-privacy/he/>\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=plural=n==1 ? 0 : (n>2||n==0) ? 1 : 2;\n"
+"X-Generator: Weblate 2.13-dev\n"
 
-#: ../src/Widgets/AppList.vala:51
+#: ../src/Widgets/AppList.vala:50
 msgid "Apps Using %s"
-msgstr ""
+msgstr "יישומים שמשתמשים ב־%s"
 
 #: ../src/Indicator.vala:33
 msgid "Privacy"
-msgstr ""
+msgstr "פרטיות"
 
 #: ../src/Indicator.vala:34
 msgid "The privacy indicator"
-msgstr ""
+msgstr "מחוון הפרטיות"
 
 #: ../src/Indicator.vala:64
 msgid "Privacy Settings…"
-msgstr ""
+msgstr "הגדרות פרטיות…"
+
+#: ../src/Backends/LocationBackend.vala:22
+msgid "Location"
+msgstr "מיקום"
+
+#: ../src/Backends/CameraBackend.vala:22
+msgid "Camera"
+msgstr "מצלמה"
