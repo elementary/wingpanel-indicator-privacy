@@ -90,7 +90,9 @@ public class Privacy.Indicator : Wingpanel.Indicator {
         }
     }
 
-    public override void opened () {}
+    public override void opened () {
+        ((Backends.Camera)camera_backend).update_app_list ();
+    }
 
     public override void closed () {}
 }

@@ -24,9 +24,13 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
     private Widgets.AppList app_list_widget;
     private bool icon_visible = false;
     private string lsof_stdout;
+    private Bamf.Matcher app_matcher;
+    private Gee.HashMap<int, AppInfo> appinfo_by_pid;
 
     public Camera () {
         app_list_widget = new Widgets.AppList (BACKEND_NAME);
+        appinfo_by_pid = new Gee.HashMap<int, AppInfo> ();
+        app_matcher = Bamf.Matcher.get_default ();
     }
 
     public override Gtk.Widget get_app_list () {
@@ -36,9 +40,6 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
     public override void added () {
         Timeout.add (1000, () => {
             bool in_use = check_camera_in_use ();
-            if (in_use) {
-                update_app_list ();
-            }
             if (!icon_visible && in_use) {
                 activated ();
                 icon_visible = true;
@@ -47,6 +48,24 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
                 icon_visible = false;
             }
             return true;
+        });
+    }
+
+    private void update_running_pids () {
+        var pm = Services.ProcessMonitor.Monitor.get_default ();
+        pm.update ();
+        var applications = app_matcher.get_running_applications ();
+
+        applications.@foreach ((app) => {
+            var appinfo = new DesktopAppInfo.from_filename (app.get_desktop_file ());
+            foreach (var window in app.get_windows ()) {
+                var parent_pid = (int)window.get_pid ();
+                appinfo_by_pid[parent_pid] = appinfo;
+                var sub_processes = pm.get_sub_processes (parent_pid);
+                foreach (int sp_pid in sub_processes) {
+                    appinfo_by_pid[sp_pid] = appinfo;
+                }
+            }
         });
     }
 
@@ -59,7 +78,9 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
         }
     }
 
-    private void update_app_list () {
+    public void update_app_list () {
+        update_running_pids ();
+
         app_list_widget.clear_apps ();
         Gee.ArrayList<string> added_pids = new Gee.ArrayList<string>();
         string[] lines = lsof_stdout.split ("\n");
@@ -69,7 +90,13 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
                 if (cols.length < 2) {
                     break;
                 }
-                string pid = cols[1];
+                string pid = "";
+                for (int j = 1; j < cols.length; j++) {
+                    if (cols[j] != "") {
+                        pid = cols[j];
+                        break;
+                    }
+                }
                 if (pid in added_pids) {
                     break;
                 }
@@ -80,46 +107,11 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
     }
 
     private AppInfo? get_app_info_from_pid (string pid) {
-        var path = FileUtils.read_link ("/proc/%s/exe".printf (pid));
-        var all_apps = AppInfo.get_all ();
-        // Check to see if we can get an exact explicit path match
-        foreach (var app in all_apps) {
-            var exec_path = app.get_executable ();
-            if (exec_path != null) {
-                if (!exec_path.has_prefix ("/")) {
-                    exec_path = get_full_exec_path (exec_path);
-                }
-                if (exec_path.has_prefix (path)) {
-                    return app;
-                }
-            }
+        var int_pid = int.parse (pid);
+        if (appinfo_by_pid.has_key (int_pid)) {
+            return appinfo_by_pid[int_pid];
+        } else {
+            return null;
         }
-        // If explicit path fails, try and find an executable with same name
-        foreach (var app in all_apps) {
-            var exec_path = app.get_executable ().split ("/");
-            if (exec_path != null) {
-                var exec = exec_path[exec_path.length - 1].split (" ")[0];
-                var pid_name_parts = path.split ("/");
-                var pid_name = pid_name_parts[pid_name_parts.length - 1];
-                if (exec == pid_name) {
-                    return app;
-                }
-            }
-        }
-        return null;
-    }
-
-    // This is the equivalent of the 'which' helper built into UNIX shells.
-    private string get_full_exec_path (string exec) {
-        var env_path = Environ.get_variable (Environ.@get (), "PATH");
-        var paths = env_path.split (":");
-        foreach (var path in paths) {
-            var possible_exec = Path.build_path (Path.DIR_SEPARATOR_S, path, exec);
-            var is_exec = FileUtils.test (possible_exec, FileTest.IS_EXECUTABLE);
-	        if (is_exec) {
-                return possible_exec;
-            }
-        }
-        return "";
     }
 }

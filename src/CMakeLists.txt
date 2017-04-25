@@ -1,7 +1,7 @@
 find_package (PkgConfig)
 
 # Add all your dependencies to the list below
-pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 wingpanel-2.0)
+pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 wingpanel-2.0 libbamf3 libgtop-2.0 gio-unix-2.0)
 
 add_definitions (${DEPS_CFLAGS})
 link_directories (${DEPS_LIBRARY_DIRS})
@@ -19,12 +19,19 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
   Backends/AbstractBackend.vala
   Backends/LocationBackend.vala
   Backends/CameraBackend.vala
+  Services/ProcessMonitor/Monitor.vala
+  Services/ProcessMonitor/Process.vala
   ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
   gtk+-3.0
   wingpanel-2.0
+  libbamf3
+  gio-unix-2.0
+  posix
 OPTIONS
   --thread
+CUSTOM_VAPIS
+  ../vapi/libgtop-2.0.vapi
 )
 
 add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C})
