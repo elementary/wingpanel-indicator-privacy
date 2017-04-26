@@ -1,22 +1,39 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-17 01:33+0200\n"
+"POT-Creation-Date: 2017-04-21 01:51+0100\n"
+"PO-Revision-Date: 2017-04-26 15:34+0000\n"
+"Last-Translator: Володимир Білошицький <volbilnexus@gmail.com>\n"
+"Language-Team: Ukrainian <https://l10n.elementary.io/projects/wingpanel"
+"/wingpanel-indicator-privacy/uk/>\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.13-dev\n"
 
-#: ../src/Widgets/AppList.vala:51
+#: ../src/Widgets/AppList.vala:50
 msgid "Apps Using %s"
-msgstr ""
+msgstr "Використовуються додатки %s"
 
 #: ../src/Indicator.vala:33
 msgid "Privacy"
-msgstr ""
+msgstr "Конфіденційність"
 
 #: ../src/Indicator.vala:34
 msgid "The privacy indicator"
-msgstr ""
+msgstr "Індикатор конфіденційності"
 
 #: ../src/Indicator.vala:64
 msgid "Privacy Settings…"
-msgstr ""
+msgstr "Налаштування конфіденційності…"
+
+#: ../src/Backends/LocationBackend.vala:22
+msgid "Location"
+msgstr "Місцезнаходження"
+
+#: ../src/Backends/CameraBackend.vala:22
+msgid "Camera"
+msgstr "Камера"
