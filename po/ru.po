@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-21 01:51+0100\n"
-"PO-Revision-Date: 2017-04-29 08:51+0000\n"
-"Last-Translator: Maxim Taranov <png2378@gmail.com>\n"
+"PO-Revision-Date: 2017-04-29 09:23+0000\n"
+"Last-Translator: Yuly <crow@rikka.io>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/wingpanel"
 "/wingpanel-indicator-privacy/ru/>\n"
 "Language: ru\n"
@@ -32,8 +32,8 @@ msgstr "Параметры приватности…"
 
 #: ../src/Backends/LocationBackend.vala:22
 msgid "Location"
-msgstr ""
+msgstr "местоположение"
 
 #: ../src/Backends/CameraBackend.vala:22
 msgid "Camera"
-msgstr ""
+msgstr "камеру"
