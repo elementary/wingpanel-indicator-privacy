@@ -49,6 +49,11 @@ public class Privacy.Services.ProcessMonitor.Process : Object {
     public string command { get; private set; }
 
     /**
+     * Exe name without full path
+     */
+    public string? exe_name { get; private set; }
+
+    /**
      * Construct a new process
      */
     public Process (int _pid) {
@@ -137,8 +142,14 @@ public class Privacy.Services.ProcessMonitor.Process : Object {
              * cmdline is a single line file with each arg seperated by a null character ('\0')
              * convert all \0 and \n to spaces
              */
+            int cmd_end_pos = 0;
+            bool cmd_end_found = false;
             for (int pos = 0; pos < size; pos++) {
                 if (cmdline_contents_array[pos] == '\0' || cmdline_contents_array[pos] == '\n') {
+                    if (!cmd_end_found) {
+                        cmd_end_pos = pos;
+                        cmd_end_found = true;
+                    }
                     cmdline_contents_array[pos] = ' ';
                 }
             }
@@ -148,6 +159,11 @@ public class Privacy.Services.ProcessMonitor.Process : Object {
 
             /* TODO: need to make sure that this works */
             command = cmdline_contents;
+            if (cmd_end_found && cmd_end_pos > 0) {
+                exe_name = command.substring (0, cmd_end_pos);
+            } else {
+                exe_name = null;
+            }
         }
         catch (Error e) {
             stderr.printf ("Error reading cmdline file '%s': %s\n", cmdline_file.get_path (), e.message);

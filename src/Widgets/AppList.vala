@@ -20,17 +20,12 @@
 public class Privacy.Widgets.AppList : Gtk.Revealer {
     private string title;
     private Gtk.Grid main_grid;
-    private Gee.HashSet<AppInfo> app_list;
+    private Gee.HashSet<AppListRow> app_list;
 
     public AppList (string title) {
         main_grid = new Gtk.Grid ();
         main_grid.orientation = Gtk.Orientation.VERTICAL;
-        app_list = new Gee.HashSet<AppInfo>((v) => {
-            return v.get_id ().hash ();
-        },
-        (a, b) => {
-            return a.get_id () == b.get_id ();
-        });
+        app_list = new Gee.HashSet<AppListRow>();
 
         add (main_grid);
 
@@ -58,29 +53,7 @@ public class Privacy.Widgets.AppList : Gtk.Revealer {
         main_grid.add (title_label);
 
         foreach (var app in app_list) {
-            var app_icon = app.get_icon ();
-            var app_name = app.get_name ();
-
-            if (app_icon == null || app_name == null) {
-                return;
-            }
-
-            var grid = new Gtk.Grid ();
-            grid.column_spacing = 6;
-            grid.margin_start = 12;
-            grid.margin_end = 12;
-            grid.margin_bottom = 6;
-
-            var app_icon_image = new Gtk.Image.from_gicon (app_icon, Gtk.IconSize.LARGE_TOOLBAR);
-            app_icon_image.pixel_size = 24;
-
-            var app_name_label = new Gtk.Label (app_name);
-            app_name_label.halign = Gtk.Align.START;
-
-            grid.attach (app_icon_image, 0, 0, 1, 1);
-            grid.attach (app_name_label, 1, 0, 1, 1);
-
-            main_grid.add (grid);
+            main_grid.add (app);
         }
 
         main_grid.add (new Wingpanel.Widgets.Separator ());
@@ -91,17 +64,16 @@ public class Privacy.Widgets.AppList : Gtk.Revealer {
     }
 
     public void add_app (AppInfo app) {
-        if (app_list.add (app)) {
+        var row = new AppListRow.from_appinfo (app);
+        if (app_list.add (row)) {
             update_list ();
         }
     }
 
-    public void remove_app (AppInfo app) {
-        if (app_list.remove (app)) {
+    public void add_unknown_app (string? label = null) {
+        var row = new AppListRow.with_label (label);
+        if (app_list.add (row)) {
             update_list ();
-        }
-        if (app_list.size == 0) {
-            set_reveal_child (false);
         }
     }
 

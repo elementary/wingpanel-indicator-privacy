@@ -100,13 +100,20 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
                 if (pid in added_pids) {
                     break;
                 }
-                app_list_widget.add_app (get_app_info_from_pid (pid));
+                var app_info = get_appinfo_from_pid (pid);
+                if (app_info == null) {
+                    var pm = Services.ProcessMonitor.Monitor.get_default ();
+                    var name = pm.get_process (int.parse (pid)).exe_name;
+                    app_list_widget.add_unknown_app (name);
+                } else {
+                    app_list_widget.add_app (app_info);
+                }
                 added_pids.add (pid);
             }
         }
     }
 
-    private AppInfo? get_app_info_from_pid (string pid) {
+    private AppInfo? get_appinfo_from_pid (string pid) {
         var int_pid = int.parse (pid);
         if (appinfo_by_pid.has_key (int_pid)) {
             return appinfo_by_pid[int_pid];

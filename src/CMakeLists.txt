@@ -15,6 +15,7 @@ include (ValaPrecompile)
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
   Indicator.vala
   Widgets/AppList.vala
+  Widgets/AppListRow.vala
   Widgets/DisplayWidget.vala
   Backends/AbstractBackend.vala
   Backends/LocationBackend.vala
