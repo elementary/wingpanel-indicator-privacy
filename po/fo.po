@@ -1,12 +1,12 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-17 01:33+0200\n"
+"POT-Creation-Date: 2017-04-21 01:51+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../src/Widgets/AppList.vala:51
+#: ../src/Widgets/AppList.vala:50
 msgid "Apps Using %s"
 msgstr ""
 
@@ -20,4 +20,12 @@ msgstr ""
 
 #: ../src/Indicator.vala:64
 msgid "Privacy Settings…"
+msgstr ""
+
+#: ../src/Backends/LocationBackend.vala:22
+msgid "Location"
+msgstr ""
+
+#: ../src/Backends/CameraBackend.vala:22
+msgid "Camera"
 msgstr ""
