@@ -23,7 +23,7 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
 
     private Widgets.AppList app_list_widget;
     private bool icon_visible = false;
-    private string lsof_stdout;
+    private Gee.ArrayList<string> lsof_outputs;
     private Bamf.Matcher app_matcher;
     private Gee.HashMap<int, AppInfo> appinfo_by_pid;
 
@@ -31,6 +31,7 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
         app_list_widget = new Widgets.AppList (BACKEND_NAME);
         appinfo_by_pid = new Gee.HashMap<int, AppInfo> ();
         app_matcher = Bamf.Matcher.get_default ();
+        lsof_outputs = new Gee.ArrayList<string> ();
     }
 
     public override Gtk.Widget get_app_list () {
@@ -70,11 +71,22 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
     }
 
     private bool check_camera_in_use () {
-        Process.spawn_command_line_sync ("lsof /dev/video0", out lsof_stdout);
-        if (lsof_stdout.length == 0) {
-            return false;
-        } else {
+        uint dev_num = 0;
+        lsof_outputs.clear ();
+        var device_path = "/dev/video%u".printf(dev_num);
+        while (FileUtils.test (device_path, FileTest.EXISTS)) {
+            string lsof_stdout;
+            Process.spawn_command_line_sync ("lsof %s".printf (device_path), out lsof_stdout);
+            if (lsof_stdout.length > 0) {
+                lsof_outputs.add (lsof_stdout);
+            }
+            dev_num++;
+            device_path = "/dev/video%u".printf(dev_num);
+        }
+        if (lsof_outputs.size > 0) {
             return true;
+        } else {
+            return false;
         }
     }
 
@@ -83,32 +95,34 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
 
         app_list_widget.clear_apps ();
         Gee.ArrayList<string> added_pids = new Gee.ArrayList<string>();
-        string[] lines = lsof_stdout.split ("\n");
-        if (lines.length > 1) {
-            for (int i = 1; i < lines.length; i++) {
-                string[] cols = lines[i].split (" ");
-                if (cols.length < 2) {
-                    break;
-                }
-                string pid = "";
-                for (int j = 1; j < cols.length; j++) {
-                    if (cols[j] != "") {
-                        pid = cols[j];
+        foreach (var lsof_stdout in lsof_outputs) {
+            string[] lines = lsof_stdout.split ("\n");
+            if (lines.length > 1) {
+                for (int i = 1; i < lines.length; i++) {
+                    string[] cols = lines[i].split (" ");
+                    if (cols.length < 2) {
                         break;
                     }
+                    string pid = "";
+                    for (int j = 1; j < cols.length; j++) {
+                        if (cols[j] != "") {
+                            pid = cols[j];
+                            break;
+                        }
+                    }
+                    if (pid in added_pids) {
+                        break;
+                    }
+                    var app_info = get_appinfo_from_pid (pid);
+                    if (app_info == null) {
+                        var pm = Services.ProcessMonitor.Monitor.get_default ();
+                        var name = pm.get_process (int.parse (pid)).exe_name;
+                        app_list_widget.add_unknown_app (name);
+                    } else {
+                        app_list_widget.add_app (app_info);
+                    }
+                    added_pids.add (pid);
                 }
-                if (pid in added_pids) {
-                    break;
-                }
-                var app_info = get_appinfo_from_pid (pid);
-                if (app_info == null) {
-                    var pm = Services.ProcessMonitor.Monitor.get_default ();
-                    var name = pm.get_process (int.parse (pid)).exe_name;
-                    app_list_widget.add_unknown_app (name);
-                } else {
-                    app_list_widget.add_app (app_info);
-                }
-                added_pids.add (pid);
             }
         }
     }
