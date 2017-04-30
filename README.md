@@ -12,6 +12,8 @@ You'll need the following dependencies:
 * libgtk-3-dev
 * libwingpanel-2.0-dev
 * valac
+* libbamf3-dev
+* libgtop2-dev
 
 It's recommended to create a clean build environment
 
