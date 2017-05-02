@@ -16,3 +16,18 @@
  * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301 USA
  */
+
+namespace Privacy.Services.DBusInterfaces {
+    [DBus (name = "org.freedesktop.DBus.Properties")]
+    public interface Properties : Object {
+        public abstract Variant Get (string interface, string propname) throws IOError;
+        public abstract void Set (string interface, string propname, Variant value) throws IOError;
+        public signal void PropertiesChanged (string changed, HashTable<string, Variant> propertiesm, string[] array);
+    }
+
+    [DBus (name = "org.freedesktop.GeoClue2.Manager")]
+    interface GeoclueManager : GLib.Object {
+        public abstract bool InUse { get; }
+        public abstract string[] GetClientList () throws IOError;
+    }
+}

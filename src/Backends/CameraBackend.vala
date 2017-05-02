@@ -90,7 +90,7 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
         }
     }
 
-    public void update_app_list () {
+    public override void update_app_list () {
         update_running_pids ();
 
         app_list_widget.clear_apps ();

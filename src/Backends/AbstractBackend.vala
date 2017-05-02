@@ -25,5 +25,6 @@ public abstract class Privacy.AbstractBackend {
     public abstract signal void apps_changed ();
 
     public abstract Gtk.Widget get_app_list ();
+    public abstract void update_app_list ();
     public abstract void added ();
 }

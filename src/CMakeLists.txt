@@ -20,6 +20,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
   Backends/AbstractBackend.vala
   Backends/LocationBackend.vala
   Backends/CameraBackend.vala
+  Services/DbusInterfaces.vala
   Services/ProcessMonitor/Monitor.vala
   Services/ProcessMonitor/Process.vala
   ${CMAKE_CURRENT_BINARY_DIR}/config.vala

@@ -23,8 +23,7 @@ public class Privacy.Indicator : Wingpanel.Indicator {
     private Widgets.DisplayWidget? indicator_icon = null;
     private Wingpanel.Widgets.Button settings;
 
-    private AbstractBackend location_backend;
-    private AbstractBackend camera_backend;
+    private Gee.ArrayList<AbstractBackend> backends;
 
     private Gtk.Grid main_grid;
 
@@ -34,16 +33,18 @@ public class Privacy.Indicator : Wingpanel.Indicator {
                 description: _("The privacy indicator"),
                 visible: false);
 
-        location_backend = new Backends.Location ();
-        camera_backend = new Backends.Camera ();
+        backends = new Gee.ArrayList<AbstractBackend> ();
+        backends.add (new Backends.Location ());
+        backends.add (new Backends.Camera ());
     }
 
     public override Gtk.Widget get_display_widget () {
         if (indicator_icon == null) {
             indicator_icon = new Widgets.DisplayWidget ();
 
-            indicator_icon.add_backend (location_backend);
-            indicator_icon.add_backend (camera_backend);
+            foreach (var backend in backends) {
+                indicator_icon.add_backend (backend);
+            }
 
             indicator_icon.visibility_changed.connect (() => {
                 var has_icons = indicator_icon.has_visible_icons ();
@@ -63,14 +64,13 @@ public class Privacy.Indicator : Wingpanel.Indicator {
 
             settings = new Wingpanel.Widgets.Button (_("Privacy Settings…"));
 
-            main_grid.add (location_backend.get_app_list ());
-            main_grid.add (camera_backend.get_app_list ());
+            foreach (var backend in backends) {
+                main_grid.add (backend.get_app_list ());
+            }
             main_grid.add (settings);
 
             connections ();
         }
-
-        this.visible = true;
 
         return main_grid;
     }
@@ -91,7 +91,9 @@ public class Privacy.Indicator : Wingpanel.Indicator {
     }
 
     public override void opened () {
-        ((Backends.Camera)camera_backend).update_app_list ();
+        foreach (var backend in backends) {
+            backend.update_app_list ();
+        }
     }
 
     public override void closed () {}
