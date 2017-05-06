@@ -23,6 +23,8 @@ public class Privacy.Backends.Location : Privacy.AbstractBackend {
 
     private const string GEOCLUE_BUS_NAME = "org.freedesktop.GeoClue2";
     private const string GEOCLUE_MANAGER_BUS_PATH = "/org/freedesktop/GeoClue2/Manager";
+    private Services.DBusInterfaces.GeoclueManager geoclue_manager;
+    private ulong props_changed_id;
 
     private Widgets.AppList app_list_widget;
 
@@ -41,8 +43,7 @@ public class Privacy.Backends.Location : Privacy.AbstractBackend {
     public override void update_app_list () {
         app_list_widget.clear_apps ();
 
-        var manager = Bus.get_proxy_sync <Services.DBusInterfaces.GeoclueManager> (BusType.SYSTEM, GEOCLUE_BUS_NAME, GEOCLUE_MANAGER_BUS_PATH);
-        var ids = manager.GetClientList ();
+        var ids = geoclue_manager.GetClientList ();
         foreach (var id in ids) {
             var app_info = new DesktopAppInfo (id + ".desktop");
             app_list_widget.add_app (app_info);
@@ -50,10 +51,23 @@ public class Privacy.Backends.Location : Privacy.AbstractBackend {
     }
 
     private void on_geoclue_start (DBusConnection conn) {
-        activated ();
+        geoclue_manager = Bus.get_proxy_sync <Services.DBusInterfaces.GeoclueManager> (BusType.SYSTEM, GEOCLUE_BUS_NAME, GEOCLUE_MANAGER_BUS_PATH);
+        if (geoclue_manager.InUse) {
+            activated ();
+        }
+        props_changed_id = geoclue_manager.g_properties_changed.connect (() => {
+            if (geoclue_manager.InUse) {
+                activated ();
+            } else {
+                deactivated ();
+                app_list_widget.clear_apps ();
+            }
+        });
     }
 
     private void on_geoclue_stop (DBusConnection conn) {
+        geoclue_manager.disconnect (props_changed_id);
         deactivated ();
+        app_list_widget.clear_apps ();
     }
 }

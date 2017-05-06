@@ -26,7 +26,7 @@ namespace Privacy.Services.DBusInterfaces {
     }
 
     [DBus (name = "org.freedesktop.GeoClue2.Manager")]
-    interface GeoclueManager : GLib.Object {
+    interface GeoclueManager : DBusProxy {
         public abstract bool InUse { get; }
         public abstract string[] GetClientList () throws IOError;
     }
