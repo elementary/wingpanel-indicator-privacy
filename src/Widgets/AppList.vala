@@ -60,6 +60,8 @@ public class Privacy.Widgets.AppList : Gtk.Revealer {
         main_grid.show_all ();
         if (app_list.size > 0) {
             set_reveal_child (true);
+        } else {
+            set_reveal_child (false);
         }
     }
 
@@ -79,6 +81,7 @@ public class Privacy.Widgets.AppList : Gtk.Revealer {
 
     public void clear_apps () {
         app_list.clear ();
+        update_list ();
     }
 
 }
