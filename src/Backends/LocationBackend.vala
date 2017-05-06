@@ -45,8 +45,10 @@ public class Privacy.Backends.Location : Privacy.AbstractBackend {
 
         var ids = geoclue_manager.GetClientList ();
         foreach (var id in ids) {
-            var app_info = new DesktopAppInfo (id + ".desktop");
-            app_list_widget.add_app (app_info);
+            if (id != "org.pantheon.agent-geoclue2") {
+                var app_info = new DesktopAppInfo (id + ".desktop");
+                app_list_widget.add_app (app_info);
+            }
         }
     }
 

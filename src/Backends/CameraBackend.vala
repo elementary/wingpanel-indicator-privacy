@@ -45,6 +45,7 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
                 activated ();
                 icon_visible = true;
             } else if (icon_visible && !in_use) {
+                app_list_widget.clear_apps ();
                 deactivated ();
                 icon_visible = false;
             }
