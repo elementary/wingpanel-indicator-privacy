@@ -43,28 +43,36 @@ public class Privacy.Backends.Location : Privacy.AbstractBackend {
     public override void update_app_list () {
         app_list_widget.clear_apps ();
 
-        var ids = geoclue_manager.GetClientList ();
-        foreach (var id in ids) {
-            if (id != "org.pantheon.agent-geoclue2") {
-                var app_info = new DesktopAppInfo (id + ".desktop");
-                app_list_widget.add_app (app_info);
+        try {
+            var ids = geoclue_manager.GetClientList ();
+            foreach (var id in ids) {
+                if (id != "org.pantheon.agent-geoclue2") {
+                    var app_info = new DesktopAppInfo (id + ".desktop");
+                    app_list_widget.add_app (app_info);
+                }
             }
+        } catch (IOError e) {
+            warning ("Error getting list of clients connected to geoclue: %s", e.message);
         }
     }
 
     private void on_geoclue_start (DBusConnection conn) {
-        geoclue_manager = Bus.get_proxy_sync <Services.DBusInterfaces.GeoclueManager> (BusType.SYSTEM, GEOCLUE_BUS_NAME, GEOCLUE_MANAGER_BUS_PATH);
-        if (geoclue_manager.InUse) {
-            activated ();
-        }
-        props_changed_id = geoclue_manager.g_properties_changed.connect (() => {
+        try {
+            geoclue_manager = Bus.get_proxy_sync <Services.DBusInterfaces.GeoclueManager> (BusType.SYSTEM, GEOCLUE_BUS_NAME, GEOCLUE_MANAGER_BUS_PATH);
             if (geoclue_manager.InUse) {
                 activated ();
-            } else {
-                deactivated ();
-                app_list_widget.clear_apps ();
             }
-        });
+            props_changed_id = geoclue_manager.g_properties_changed.connect (() => {
+                if (geoclue_manager.InUse) {
+                    activated ();
+                } else {
+                    deactivated ();
+                    app_list_widget.clear_apps ();
+                }
+            });
+        } catch (IOError e) {
+            warning ("Error connecting to geoclue2 via dbus: %s", e.message);
+        }
     }
 
     private void on_geoclue_stop (DBusConnection conn) {

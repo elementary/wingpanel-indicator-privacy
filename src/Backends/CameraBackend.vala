@@ -77,7 +77,11 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
         var device_path = "/dev/video%u".printf(dev_num);
         while (FileUtils.test (device_path, FileTest.EXISTS)) {
             string lsof_stdout;
-            Process.spawn_command_line_sync ("lsof %s".printf (device_path), out lsof_stdout);
+            try {
+                Process.spawn_command_line_sync ("lsof %s".printf (device_path), out lsof_stdout);
+            } catch (SpawnError e) {
+                warning ("Error calling lsof to check video device: %s", e.message);
+            }
             if (lsof_stdout.length > 0) {
                 lsof_outputs.add (lsof_stdout);
             }
