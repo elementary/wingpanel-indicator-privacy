@@ -2,29 +2,37 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-21 01:51+0100\n"
+"PO-Revision-Date: 2017-05-12 21:25+0000\n"
+"Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
+"Language-Team: Italian <https://l10n.elementary.io/projects/wingpanel"
+"/wingpanel-indicator-privacy/it/>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.13-dev\n"
 
 #: ../src/Widgets/AppList.vala:50
 msgid "Apps Using %s"
-msgstr ""
+msgstr "Applicazioni che usano %s"
 
 #: ../src/Indicator.vala:33
 msgid "Privacy"
-msgstr ""
+msgstr "Privacy"
 
 #: ../src/Indicator.vala:34
 msgid "The privacy indicator"
-msgstr ""
+msgstr "L'indicatore della privacy"
 
 #: ../src/Indicator.vala:64
 msgid "Privacy Settings…"
-msgstr ""
+msgstr "Impostazioni della privacy…"
 
 #: ../src/Backends/LocationBackend.vala:22
 msgid "Location"
-msgstr ""
+msgstr "Posizione"
 
 #: ../src/Backends/CameraBackend.vala:22
 msgid "Camera"
-msgstr ""
+msgstr "Camera"
