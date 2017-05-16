@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-21 01:51+0100\n"
-"PO-Revision-Date: 2017-05-16 06:51+0000\n"
-"Last-Translator: Fernando da Silva Sousa <wild.nando@gmail.com>\n"
+"PO-Revision-Date: 2017-05-16 06:52+0000\n"
+"Last-Translator: Saulo de Baco <saulodebaco@hotmail.com>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://l10n.elementary.io/projects/wingpanel/wingpanel-indicator-"
 "privacy/pt_BR/>\n"
@@ -20,20 +20,20 @@ msgstr "Apps utilizando %s"
 
 #: ../src/Indicator.vala:33
 msgid "Privacy"
-msgstr ""
+msgstr "Privacidade"
 
 #: ../src/Indicator.vala:34
 msgid "The privacy indicator"
-msgstr ""
+msgstr "Indicador de privacidade"
 
 #: ../src/Indicator.vala:64
 msgid "Privacy Settings…"
-msgstr ""
+msgstr "Configurações de Privacidade..."
 
 #: ../src/Backends/LocationBackend.vala:22
 msgid "Location"
-msgstr ""
+msgstr "Localização"
 
 #: ../src/Backends/CameraBackend.vala:22
 msgid "Camera"
-msgstr ""
+msgstr "Câmera"
