@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-21 01:51+0100\n"
-"PO-Revision-Date: 2017-05-17 17:15+0000\n"
-"Last-Translator: Fernando da Silva Sousa <wild.nando@gmail.com>\n"
+"PO-Revision-Date: 2017-06-09 19:05+0000\n"
+"Last-Translator: Henrique Specian <henrique_specian@hotmail.com>\n"
 "Language-Team: Portuguese (Brazil) "
 "<https://l10n.elementary.io/projects/wingpanel/wingpanel-indicator-"
 "privacy/pt_BR/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 2.14\n"
 
 #: ../src/Widgets/AppList.vala:50
 msgid "Apps Using %s"
@@ -24,7 +24,7 @@ msgstr "Privacidade"
 
 #: ../src/Indicator.vala:34
 msgid "The privacy indicator"
-msgstr "Indicador de privacidade"
+msgstr "O indicador de privacidade"
 
 #: ../src/Indicator.vala:64
 msgid "Privacy Settings…"
