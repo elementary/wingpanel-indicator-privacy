@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-21 01:51+0100\n"
-"PO-Revision-Date: 2018-01-05 00:45+0000\n"
-"Last-Translator: LIU Song <mail@liusong.net>\n"
+"PO-Revision-Date: 2018-01-05 00:46+0000\n"
+"Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) "
 "<https://weblate.elementary.io/projects/wingpanel/wingpanel-indicator-"
 "privacy/zh_CN/>\n"
@@ -24,7 +24,7 @@ msgstr "隐私"
 
 #: ../src/Indicator.vala:34
 msgid "The privacy indicator"
-msgstr ""
+msgstr "隐私指示器"
 
 #: ../src/Indicator.vala:64
 msgid "Privacy Settings…"
