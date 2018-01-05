@@ -2,12 +2,21 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-21 01:51+0100\n"
+"PO-Revision-Date: 2018-01-05 00:45+0000\n"
+"Last-Translator: Coiby <Coiby.Xu@gmail.com>\n"
+"Language-Team: Chinese (Simplified) "
+"<https://weblate.elementary.io/projects/wingpanel/wingpanel-indicator-"
+"privacy/zh_CN/>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.18\n"
 
 #: ../src/Widgets/AppList.vala:50
 msgid "Apps Using %s"
-msgstr ""
+msgstr "使用 %s 的应用"
 
 #: ../src/Indicator.vala:33
 msgid "Privacy"
