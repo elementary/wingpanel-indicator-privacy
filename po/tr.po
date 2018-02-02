@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-21 01:51+0100\n"
-"PO-Revision-Date: 2018-02-02 19:42+0000\n"
-"Last-Translator: Kemal Türk <kemalturk@ctu.com.tr>\n"
+"PO-Revision-Date: 2018-02-03 00:10+0000\n"
+"Last-Translator: Furkan Ege Öztürk <furkanegeozturk@galatasaray.net>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/wingpanel"
 "/wingpanel-indicator-privacy/tr/>\n"
 "Language: tr\n"
@@ -27,7 +27,7 @@ msgstr "Gizlilik göstergesi"
 
 #: ../src/Indicator.vala:64
 msgid "Privacy Settings…"
-msgstr "Gizlilik Ayarları..."
+msgstr "Gizlilik Ayarları…"
 
 #: ../src/Backends/LocationBackend.vala:22
 msgid "Location"
