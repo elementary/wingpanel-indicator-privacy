@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-21 01:51+0100\n"
-"PO-Revision-Date: 2018-03-24 17:07+0000\n"
-"Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
+"PO-Revision-Date: 2018-04-28 00:04+0000\n"
+"Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/wingpanel"
 "/wingpanel-indicator-privacy/da/>\n"
 "Language: da\n"
@@ -23,11 +23,11 @@ msgstr "Fortrolighed"
 
 #: ../src/Indicator.vala:34
 msgid "The privacy indicator"
-msgstr "Fortroligheds-indikator"
+msgstr "Privatlivsindikator"
 
 #: ../src/Indicator.vala:64
 msgid "Privacy Settings…"
-msgstr "Fortrolighedsindstillinger…"
+msgstr "Privatlivsindstillinger…"
 
 #: ../src/Backends/LocationBackend.vala:22
 msgid "Location"
