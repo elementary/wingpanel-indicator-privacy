@@ -7,7 +7,7 @@
 
 You'll need the following dependencies:
 
-* cmake
+* meson
 * libgee-0.8-dev
 * libgtk-3-dev
 * libwingpanel-2.0-dev
@@ -15,16 +15,12 @@ You'll need the following dependencies:
 * libbamf3-dev
 * libgtop2-dev
 
-It's recommended to create a clean build environment
+Run `meson` to configure the build environment and then `ninja` to build
 
-    mkdir build
-    cd build/
-    
-Run `cmake` to configure the build environment and then `make` to build
+    meson build --prefix=/usr
+    cd build
+    ninja
 
-    cmake -DCMAKE_INSTALL_PREFIX=/usr ..
-    make
-    
-To install, use `make install`
+To install, use `ninja install`
 
-    sudo make install
+    sudo ninja install

@@ -1,0 +1,67 @@
+Build started at 2018-05-29T01:38:14.965719
+Main binary: /usr/bin/python3
+Python system: Linux
+The Meson build system
+Version: 0.45.0
+Source dir: /home/alain/Proyectos/wingpanel-indicator-privacy
+Build dir: /home/alain/Proyectos/wingpanel-indicator-privacy/build
+Build type: native build
+Project name: privacy
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc /home/alain/Proyectos/wingpanel-indicator-privacy/build/meson-private/sanitycheckc.c -o /home/alain/Proyectos/wingpanel-indicator-privacy/build/meson-private/sanitycheckc.exe
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/alain/Proyectos/wingpanel-indicator-privacy/build/meson-private/sanitycheckc.exe
+Native C compiler: cc (gcc 5.4.0 "cc (Ubuntu 5.4.0-6ubuntu1~16.04.9) 5.4.0 20160609")
+Running compile:
+Working directory:  /tmp/tmpr2cwckpo
+Command line:  valac /tmp/tmpr2cwckpo/testfile.vala -C -C -o /tmp/tmpr2cwckpo/output.obj 
+
+Code:
+ class MesonSanityCheck : Object { }
+Compiler stdout:
+ Compilation succeeded - 1 warning(s)
+
+Compiler stderr:
+ warning: --output and -o have no effect when -C or --ccode is set
+
+Native Vala compiler: valac (valac 0.36.14)
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Found pkg-config: /usr/bin/pkg-config (0.29.1)
+Determining dependency 'wingpanel-2.0' with pkg-config executable '/usr/bin/pkg-config'
+Native dependency wingpanel-2.0 found: YES 2.0
+WARNING: pkgconfig variable 'indicatorsdir' not defined for dependency wingpanel-2.0.
+Got pkgconfig variable indicatorsdir : 
+Determining dependency 'glib-2.0' with pkg-config executable '/usr/bin/pkg-config'
+Native dependency glib-2.0 found: YES 2.48.2
+Determining dependency 'gobject-2.0' with pkg-config executable '/usr/bin/pkg-config'
+Native dependency gobject-2.0 found: YES 2.48.2
+Determining dependency 'gtk+-3.0' with pkg-config executable '/usr/bin/pkg-config'
+Native dependency gtk+-3.0 found: YES 3.18.9
+Determining dependency 'libbamf3' with pkg-config executable '/usr/bin/pkg-config'
+Native dependency libbamf3 found: YES 0.5.3
+Determining dependency 'libgtop-2.0' with pkg-config executable '/usr/bin/pkg-config'
+Native dependency libgtop-2.0 found: YES 2.32.0
+Determining dependency 'gio-unix-2.0' with pkg-config executable '/usr/bin/pkg-config'
+Native dependency gio-unix-2.0 found: YES 2.48.2
+Running compile:
+Working directory:  /tmp/tmphstmw00t
+Command line:  valac /tmp/tmphstmw00t/testfile.vala --pkg posix -C -C -o /tmp/tmphstmw00t/output.obj 
+
+Code:
+ class MesonFindLibrary : Object { }
+Compiler stdout:
+ Compilation succeeded - 1 warning(s)
+
+Compiler stderr:
+ warning: --output and -o have no effect when -C or --ccode is set
+
+Library posix found: YES
+Build targets in project: 4
+Found ninja-1.8.2 at /usr/bin/ninja
