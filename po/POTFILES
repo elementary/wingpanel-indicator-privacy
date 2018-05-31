@@ -1,0 +1,10 @@
+src/Indicator.vala
+src/Widgets/AppList.vala
+src/Widgets/AppListRow.vala
+src/Widgets/DisplayWidget.vala
+src/Backends/AbstractBackend.vala
+src/Backends/CameraBackend.vala
+src/Backends/LocationBackend.vala
+src/Services/DbusInterfaces.vala
+src/Services/ProcessMonitor/Monitor.vala
+src/Services/ProcessMonitor/Process.vala

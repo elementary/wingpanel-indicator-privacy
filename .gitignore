@@ -9,7 +9,7 @@ Makefile
 *.gir
 .deps
 .libs
-
+build/
 config.*
 aclocal.m4
 autom4te.cache
@@ -39,5 +39,3 @@ lcov.info
 build-aux/test-driver
 
 tests/_test
-
-
