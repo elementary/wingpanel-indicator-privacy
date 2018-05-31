@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-21 01:51+0100\n"
-"PO-Revision-Date: 2018-05-29 11:48+0000\n"
+"PO-Revision-Date: 2018-06-01 00:11+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/wingpanel"
 "/wingpanel-indicator-privacy/hu/>\n"
@@ -19,15 +19,15 @@ msgstr "Alkalmazások használják %s"
 
 #: ../src/Indicator.vala:33
 msgid "Privacy"
-msgstr "Magánszféra"
+msgstr "Adatvédelem"
 
 #: ../src/Indicator.vala:34
 msgid "The privacy indicator"
-msgstr "Magánszféra indikátor"
+msgstr "Adatvédelem indikátor"
 
 #: ../src/Indicator.vala:64
 msgid "Privacy Settings…"
-msgstr "Magánszféra beállítások…"
+msgstr "Adatvédelmi beállítások…"
 
 #: ../src/Backends/LocationBackend.vala:22
 msgid "Location"
