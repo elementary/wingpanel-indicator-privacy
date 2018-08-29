@@ -2,17 +2,16 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-21 01:51+0100\n"
-"PO-Revision-Date: 2017-06-09 19:05+0000\n"
-"Last-Translator: Henrique Specian <henrique_specian@hotmail.com>\n"
-"Language-Team: Portuguese (Brazil) "
-"<https://l10n.elementary.io/projects/wingpanel/wingpanel-indicator-"
-"privacy/pt_BR/>\n"
+"PO-Revision-Date: 2018-08-30 00:09+0000\n"
+"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
+"wingpanel/wingpanel-indicator-privacy/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.14\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #: ../src/Widgets/AppList.vala:50
 msgid "Apps Using %s"
@@ -28,7 +27,7 @@ msgstr "O indicador de privacidade"
 
 #: ../src/Indicator.vala:64
 msgid "Privacy Settings…"
-msgstr "Configurações de Privacidade..."
+msgstr "Configurações de Privacidade…"
 
 #: ../src/Backends/LocationBackend.vala:22
 msgid "Location"
