@@ -1,6 +1,8 @@
 # Wingpanel Privacy Indicator
 [![l10n](https://l10n.elementary.io/widgets/wingpanel/wingpanel-indicator-privacy/svg-badge.svg)](https://l10n.elementary.io/projects/wingpanel/wingpanel-indicator-privacy)
 
+![Screenshot](data/screenshot.png)
+
 The Privacy indicator watches for usage of the camera or location services and displays a tattle-taling camera and/or location icon in the panel when they are being used. For camera usage, the indicator popover lists the app(s) using the camera.
 
 ## Building and Installation
