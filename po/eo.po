@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 01:51+0100\n"
+"POT-Creation-Date: 2019-06-26 22:47+0200\n"
 "PO-Revision-Date: 2018-10-26 01:53+0000\n"
 "Last-Translator: Jesse ALTER <jesse@jessealter.com>\n"
 "Language-Team: Esperanto <https://weblate.elementary.io/projects/wingpanel/"
@@ -13,26 +13,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.0.1\n"
 
-#: ../src/Widgets/AppList.vala:50
-msgid "Apps Using %s"
-msgstr "Apoj uzante %s"
-
-#: ../src/Indicator.vala:33
+#: src/Indicator.vala:32
 msgid "Privacy"
 msgstr "Privateco"
 
-#: ../src/Indicator.vala:34
+#: src/Indicator.vala:33
 msgid "The privacy indicator"
 msgstr "La privateca indikilo"
 
-#: ../src/Indicator.vala:64
+#: src/Indicator.vala:65
 msgid "Privacy Settings…"
 msgstr "Privatecaj agordoj…"
 
-#: ../src/Backends/LocationBackend.vala:22
-msgid "Location"
-msgstr "Pozicio"
+#: src/Widgets/AppList.vala:45
+#, c-format
+msgid "Apps Using %s"
+msgstr "Apoj uzante %s"
 
-#: ../src/Backends/CameraBackend.vala:22
+#: src/Widgets/AppListRow.vala:26
+msgid "Unknown Application"
+msgstr ""
+
+#: src/Backends/CameraBackend.vala:22
 msgid "Camera"
 msgstr "Fotilo"
+
+#: src/Backends/LocationBackend.vala:22
+msgid "Location"
+msgstr "Pozicio"

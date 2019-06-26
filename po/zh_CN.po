@@ -1,12 +1,11 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 01:51+0100\n"
+"POT-Creation-Date: 2019-06-26 22:47+0200\n"
 "PO-Revision-Date: 2018-01-06 00:29+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
-"Language-Team: Chinese (Simplified) "
-"<https://weblate.elementary.io/projects/wingpanel/wingpanel-indicator-"
-"privacy/zh_CN/>\n"
+"Language-Team: Chinese (Simplified) <https://weblate.elementary.io/projects/"
+"wingpanel/wingpanel-indicator-privacy/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,26 +13,31 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.18\n"
 
-#: ../src/Widgets/AppList.vala:50
-msgid "Apps Using %s"
-msgstr "使用 %s 的应用"
-
-#: ../src/Indicator.vala:33
+#: src/Indicator.vala:32
 msgid "Privacy"
 msgstr "隐私"
 
-#: ../src/Indicator.vala:34
+#: src/Indicator.vala:33
 msgid "The privacy indicator"
 msgstr "隐私指示器"
 
-#: ../src/Indicator.vala:64
+#: src/Indicator.vala:65
 msgid "Privacy Settings…"
 msgstr "隐私设置…"
 
-#: ../src/Backends/LocationBackend.vala:22
-msgid "Location"
-msgstr "位置"
+#: src/Widgets/AppList.vala:45
+#, c-format
+msgid "Apps Using %s"
+msgstr "使用 %s 的应用"
 
-#: ../src/Backends/CameraBackend.vala:22
+#: src/Widgets/AppListRow.vala:26
+msgid "Unknown Application"
+msgstr ""
+
+#: src/Backends/CameraBackend.vala:22
 msgid "Camera"
 msgstr "相机"
+
+#: src/Backends/LocationBackend.vala:22
+msgid "Location"
+msgstr "位置"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 01:51+0100\n"
+"POT-Creation-Date: 2019-06-26 22:47+0200\n"
 "PO-Revision-Date: 2019-01-14 00:11+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/wingpanel/"
@@ -13,26 +13,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.0.1\n"
 
-#: ../src/Widgets/AppList.vala:50
-msgid "Apps Using %s"
-msgstr "Applications utilisant %s"
-
-#: ../src/Indicator.vala:33
+#: src/Indicator.vala:32
 msgid "Privacy"
 msgstr "Confidentialité"
 
-#: ../src/Indicator.vala:34
+#: src/Indicator.vala:33
 msgid "The privacy indicator"
 msgstr "L'indicateur de confidentialité"
 
-#: ../src/Indicator.vala:64
+#: src/Indicator.vala:65
 msgid "Privacy Settings…"
 msgstr "Paramètres de confidentialité…"
 
-#: ../src/Backends/LocationBackend.vala:22
-msgid "Location"
-msgstr "Localisation"
+#: src/Widgets/AppList.vala:45
+#, c-format
+msgid "Apps Using %s"
+msgstr "Applications utilisant %s"
 
-#: ../src/Backends/CameraBackend.vala:22
+#: src/Widgets/AppListRow.vala:26
+msgid "Unknown Application"
+msgstr ""
+
+#: src/Backends/CameraBackend.vala:22
 msgid "Camera"
 msgstr "Caméra"
+
+#: src/Backends/LocationBackend.vala:22
+msgid "Location"
+msgstr "Localisation"

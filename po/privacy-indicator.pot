@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the privacy-indicator package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: privacy-indicator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 01:51+0100\n"
+"POT-Creation-Date: 2019-06-26 22:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,26 +17,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/Widgets/AppList.vala:50
-msgid "Apps Using %s"
-msgstr ""
-
-#: ../src/Indicator.vala:33
+#: src/Indicator.vala:32
 msgid "Privacy"
 msgstr ""
 
-#: ../src/Indicator.vala:34
+#: src/Indicator.vala:33
 msgid "The privacy indicator"
 msgstr ""
 
-#: ../src/Indicator.vala:64
+#: src/Indicator.vala:65
 msgid "Privacy Settings…"
 msgstr ""
 
-#: ../src/Backends/LocationBackend.vala:22
-msgid "Location"
+#: src/Widgets/AppList.vala:45
+#, c-format
+msgid "Apps Using %s"
 msgstr ""
 
-#: ../src/Backends/CameraBackend.vala:22
+#: src/Widgets/AppListRow.vala:26
+msgid "Unknown Application"
+msgstr ""
+
+#: src/Backends/CameraBackend.vala:22
 msgid "Camera"
+msgstr ""
+
+#: src/Backends/LocationBackend.vala:22
+msgid "Location"
 msgstr ""

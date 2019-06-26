@@ -2,33 +2,32 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:47+0200\n"
-"PO-Revision-Date: 2017-06-24 18:50+0000\n"
-"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
-"Language-Team: Dutch <https://l10n.elementary.io/projects/wingpanel/"
-"wingpanel-indicator-privacy/nl/>\n"
-"Language: nl\n"
+"PO-Revision-Date: 2019-06-26 18:53+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: szl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.14\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
 
 #: src/Indicator.vala:32
 msgid "Privacy"
-msgstr "Privacy"
+msgstr ""
 
 #: src/Indicator.vala:33
 msgid "The privacy indicator"
-msgstr "De privacy indicator"
+msgstr ""
 
 #: src/Indicator.vala:65
 msgid "Privacy Settings…"
-msgstr "Privacyinstellingen…"
+msgstr ""
 
 #: src/Widgets/AppList.vala:45
 #, c-format
 msgid "Apps Using %s"
-msgstr "Toepassingen gebruik makend van %s"
+msgstr ""
 
 #: src/Widgets/AppListRow.vala:26
 msgid "Unknown Application"
@@ -36,8 +35,8 @@ msgstr ""
 
 #: src/Backends/CameraBackend.vala:22
 msgid "Camera"
-msgstr "Camera"
+msgstr ""
 
 #: src/Backends/LocationBackend.vala:22
 msgid "Location"
-msgstr "Locatie"
+msgstr ""

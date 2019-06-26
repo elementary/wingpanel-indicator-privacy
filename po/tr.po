@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 01:51+0100\n"
+"POT-Creation-Date: 2019-06-26 22:47+0200\n"
 "PO-Revision-Date: 2019-04-10 21:11+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/wingpanel/"
@@ -13,26 +13,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.5.1\n"
 
-#: ../src/Widgets/AppList.vala:50
-msgid "Apps Using %s"
-msgstr "%s Özelliğini Kullanılan Uygulamalar"
-
-#: ../src/Indicator.vala:33
+#: src/Indicator.vala:32
 msgid "Privacy"
 msgstr "Gizlilik"
 
-#: ../src/Indicator.vala:34
+#: src/Indicator.vala:33
 msgid "The privacy indicator"
 msgstr "Gizlilik göstergesi"
 
-#: ../src/Indicator.vala:64
+#: src/Indicator.vala:65
 msgid "Privacy Settings…"
 msgstr "Gizlilik Ayarları…"
 
-#: ../src/Backends/LocationBackend.vala:22
-msgid "Location"
-msgstr "Konum"
+#: src/Widgets/AppList.vala:45
+#, c-format
+msgid "Apps Using %s"
+msgstr "%s Özelliğini Kullanılan Uygulamalar"
 
-#: ../src/Backends/CameraBackend.vala:22
+#: src/Widgets/AppListRow.vala:26
+msgid "Unknown Application"
+msgstr ""
+
+#: src/Backends/CameraBackend.vala:22
 msgid "Camera"
 msgstr "Kamera"
+
+#: src/Backends/LocationBackend.vala:22
+msgid "Location"
+msgstr "Konum"
