@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:47+0200\n"
-"PO-Revision-Date: 2018-12-21 06:42+0000\n"
-"Last-Translator: Mohelm97 <mohelm97@gmail.com>\n"
-"Language-Team: Arabic <https://weblate.elementary.io/projects/wingpanel/"
+"PO-Revision-Date: 2019-08-29 17:23+0000\n"
+"Last-Translator: nasserbinlaboun <nasser1990com@gmail.com>\n"
+"Language-Team: Arabic <https://l10n.elementary.io/projects/wingpanel/"
 "wingpanel-indicator-privacy/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #: src/Indicator.vala:32
 msgid "Privacy"
@@ -33,7 +33,7 @@ msgstr "التطبيقات التي تستخدم %s"
 
 #: src/Widgets/AppListRow.vala:26
 msgid "Unknown Application"
-msgstr ""
+msgstr "تطبيق غير معروف"
 
 #: src/Backends/CameraBackend.vala:22
 msgid "Camera"
