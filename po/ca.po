@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:47+0200\n"
-"PO-Revision-Date: 2017-05-03 14:17+0000\n"
+"PO-Revision-Date: 2019-08-29 17:23+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/wingpanel/"
 "wingpanel-indicator-privacy/ca/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #: src/Indicator.vala:32
 msgid "Privacy"
@@ -32,7 +32,7 @@ msgstr "Aplicacions que usen %s"
 
 #: src/Widgets/AppListRow.vala:26
 msgid "Unknown Application"
-msgstr ""
+msgstr "Aplicació desconeguda"
 
 #: src/Backends/CameraBackend.vala:22
 msgid "Camera"
