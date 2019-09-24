@@ -65,7 +65,7 @@ public class Privacy.Widgets.AppListRow : Gtk.Grid {
         } else {
             label = new Gtk.Label (UNKNOWN_APP_TEXT);
         }
-        
+
         icon.pixel_size = 24;
         label.halign = Gtk.Align.START;
 
