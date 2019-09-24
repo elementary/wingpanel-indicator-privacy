@@ -25,7 +25,7 @@ public class Privacy.Widgets.AppList : Gtk.Revealer {
     public AppList (string title) {
         main_grid = new Gtk.Grid ();
         main_grid.orientation = Gtk.Orientation.VERTICAL;
-        app_list = new Gee.HashSet<AppListRow>();
+        app_list = new Gee.HashSet<AppListRow> ();
 
         add (main_grid);
 

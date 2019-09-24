@@ -25,7 +25,7 @@ public class Privacy.Widgets.DisplayWidget : Gtk.Box {
     construct {
         revealers = new Gee.ArrayList<Gtk.Revealer> ();
     }
-    
+
     public void add_backend (AbstractBackend backend) {
         var revealer = new Gtk.Revealer ();
         revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_RIGHT;
@@ -76,8 +76,8 @@ public class Privacy.Widgets.DisplayWidget : Gtk.Box {
                 if (revealers[j].get_reveal_child ()) {
                     revealers[i].get_child ().margin_start = ICON_SPACING;
                     break;
-                }   
-            }  
+                }
+            }
         }
     }
 }

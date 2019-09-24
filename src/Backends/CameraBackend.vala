@@ -74,7 +74,7 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
     private bool check_camera_in_use () {
         uint dev_num = 0;
         lsof_outputs.clear ();
-        var device_path = "/dev/video%u".printf(dev_num);
+        var device_path = "/dev/video%u".printf (dev_num);
         while (FileUtils.test (device_path, FileTest.EXISTS)) {
             string lsof_stdout;
             try {
@@ -86,7 +86,7 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
                 lsof_outputs.add (lsof_stdout);
             }
             dev_num++;
-            device_path = "/dev/video%u".printf(dev_num);
+            device_path = "/dev/video%u".printf (dev_num);
         }
         if (lsof_outputs.size > 0) {
             return true;
@@ -99,7 +99,7 @@ public class Privacy.Backends.Camera : Privacy.AbstractBackend {
         update_running_pids ();
 
         app_list_widget.clear_apps ();
-        Gee.ArrayList<string> added_pids = new Gee.ArrayList<string>();
+        Gee.ArrayList<string> added_pids = new Gee.ArrayList<string> ();
         foreach (var lsof_stdout in lsof_outputs) {
             string[] lines = lsof_stdout.split ("\n");
             if (lines.length > 1) {
