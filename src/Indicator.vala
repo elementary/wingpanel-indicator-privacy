@@ -29,8 +29,6 @@ public class Privacy.Indicator : Wingpanel.Indicator {
 
     public Indicator () {
         Object (code_name: "privacy",
-                display_name: _("Privacy"),
-                description: _("The privacy indicator"),
                 visible: false);
 
         backends = new Gee.ArrayList<AbstractBackend> ();
