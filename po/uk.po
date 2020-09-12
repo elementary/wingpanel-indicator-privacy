@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:47+0200\n"
-"PO-Revision-Date: 2020-09-12 20:14+0000\n"
+"PO-Revision-Date: 2020-09-12 23:11+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/wingpanel/"
 "wingpanel-indicator-privacy/uk/>\n"
@@ -24,7 +24,7 @@ msgstr "Індикатор приватності"
 
 #: src/Indicator.vala:65
 msgid "Privacy Settings…"
-msgstr "Налаштування приватності…"
+msgstr "Параметри приватності…"
 
 #: src/Widgets/AppList.vala:45
 #, c-format
