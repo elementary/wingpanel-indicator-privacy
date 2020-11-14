@@ -4,7 +4,7 @@
   <id>io.elementary.wingpanel.privacy</id>
   <extends>io.elementary.wingpanel</extends>
   <name>Privacy Indicator</name>
-  <summary>Watches for privacy related functions</summary>
+  <summary>Warns of privacy related events</summary>
   <icon type="stock">preferences-system-privacy</icon>
   <releases>
   </releases>
