@@ -1,5 +1,3 @@
-i18n.gettext(gettext_name,
+i18n.gettext('extra',
     args: ['--directory=' + meson.source_root(), '--from-code=UTF-8']
 )
-
-subdir('extra')
