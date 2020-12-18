@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:47+0200\n"
-"PO-Revision-Date: 2017-05-06 10:59+0000\n"
+"PO-Revision-Date: 2020-12-19 14:16+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/wingpanel/"
 "wingpanel-indicator-privacy/sr/>\n"
@@ -10,9 +10,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=nplurals=3; plural=(n%10==1 && n%100!=11 ? "
-"0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"Plural-Forms: nplurals=2; plural=n;\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: src/Indicator.vala:32
 msgid "Privacy"
@@ -24,7 +23,7 @@ msgstr "Указивач приватности"
 
 #: src/Indicator.vala:65
 msgid "Privacy Settings…"
-msgstr "Подешавања приватности…"
+msgstr "Поставке приватности…"
 
 #: src/Widgets/AppList.vala:45
 #, c-format
@@ -33,7 +32,7 @@ msgstr "Програми који користе „%s“"
 
 #: src/Widgets/AppListRow.vala:26
 msgid "Unknown Application"
-msgstr ""
+msgstr "Непознат програм"
 
 #: src/Backends/CameraBackend.vala:22
 msgid "Camera"
