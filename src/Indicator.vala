@@ -60,8 +60,9 @@ public class Privacy.Indicator : Wingpanel.Indicator {
             main_grid = new Gtk.Grid ();
             main_grid.set_orientation (Gtk.Orientation.VERTICAL);
 
-            settings = new Gtk.ModelButton ();
-            settings.text = _("Privacy Settings…");
+            settings = new Gtk.ModelButton () {
+                text = _("Privacy Settings…")
+            };
 
             foreach (var backend in backends) {
                 main_grid.add (backend.get_app_list ());
