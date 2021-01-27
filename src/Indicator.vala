@@ -21,14 +21,14 @@ public class Privacy.Indicator : Wingpanel.Indicator {
     private const string ICON_NAME = "find-location-symbolic";
 
     private Widgets.DisplayWidget? indicator_icon = null;
-    private Wingpanel.Widgets.Button settings;
+    private Gtk.ModelButton settings;
 
     private Gee.ArrayList<AbstractBackend> backends;
 
     private Gtk.Grid main_grid;
 
     public Indicator () {
-        Object (code_name: "privacy",
+        Object (code_name: Wingpanel.Indicator.PRIVACY,
                 visible: false);
 
         backends = new Gee.ArrayList<AbstractBackend> ();
@@ -60,7 +60,9 @@ public class Privacy.Indicator : Wingpanel.Indicator {
             main_grid = new Gtk.Grid ();
             main_grid.set_orientation (Gtk.Orientation.VERTICAL);
 
-            settings = new Wingpanel.Widgets.Button (_("Privacy Settings…"));
+            settings = new Gtk.ModelButton () {
+                text = _("Privacy Settings…")
+            };
 
             foreach (var backend in backends) {
                 main_grid.add (backend.get_app_list ());
