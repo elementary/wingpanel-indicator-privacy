@@ -12,7 +12,7 @@ You'll need the following dependencies:
 * meson
 * libgee-0.8-dev
 * libgtk-3-dev
-* libwingpanel-2.0-dev
+* libwingpanel-dev
 * valac
 * libbamf3-dev
 * libgtop2-dev
