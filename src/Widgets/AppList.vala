@@ -42,13 +42,11 @@ public class Privacy.Widgets.AppList : Gtk.Revealer {
     private void update_list () {
         clear_grid ();
 
-        var title_label = new Gtk.Label (_("Apps Using %s").printf (title));
-        title_label.get_style_context ().add_class ("h4");
-        title_label.halign = Gtk.Align.START;
-        title_label.margin_start = 12;
-        title_label.margin_end = 12;
-        title_label.margin_bottom = 6;
-        title_label.hexpand = true;
+        var title_label = new Granite.HeaderLabel (_("Apps Using %s").printf (title)) {
+            margin_end = 12,
+            margin_bottom = 6,
+            hexpand = true
+        };
 
         main_grid.add (title_label);
 
