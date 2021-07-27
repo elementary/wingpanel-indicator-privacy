@@ -51,7 +51,7 @@ public class Privacy.Backends.Location : Privacy.AbstractBackend {
                     app_list_widget.add_app (app_info);
                 }
             }
-        } catch (IOError e) {
+        } catch (Error e) {
             warning ("Error getting list of clients connected to geoclue: %s", e.message);
         }
     }

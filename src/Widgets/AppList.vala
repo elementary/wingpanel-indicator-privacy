@@ -54,7 +54,11 @@ public class Privacy.Widgets.AppList : Gtk.Revealer {
             main_grid.add (app);
         }
 
-        main_grid.add (new Wingpanel.Widgets.Separator ());
+        var separator = new Gtk.Separator (Gtk.Orientation.HORIZONTAL) {
+            margin_top = 3,
+            margin_bottom = 3
+        };
+        main_grid.add (separator);
         main_grid.show_all ();
         if (app_list.size > 0) {
             set_reveal_child (true);
