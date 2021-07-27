@@ -9,13 +9,14 @@ The Privacy indicator watches for usage of the camera or location services and d
 
 You'll need the following dependencies:
 
-* meson
-* libgee-0.8-dev
-* libgtk-3-dev
-* libwingpanel-dev
-* valac
 * libbamf3-dev
+* libgee-0.8-dev
+* libgranite-dev
+* libgtk-3-dev
 * libgtop2-dev
+* libwingpanel-dev
+* meson
+* valac
 
 Run `meson` to configure the build environment and then `ninja` to build
 
@@ -25,4 +26,4 @@ Run `meson` to configure the build environment and then `ninja` to build
 
 To install, use `ninja install`
 
-    sudo ninja install
+    ninja install
