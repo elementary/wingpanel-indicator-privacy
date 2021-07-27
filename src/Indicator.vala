@@ -18,8 +18,6 @@
  */
 
 public class Privacy.Indicator : Wingpanel.Indicator {
-    private const string ICON_NAME = "find-location-symbolic";
-
     private Widgets.DisplayWidget? indicator_icon = null;
     private Gtk.ModelButton settings;
 
@@ -69,24 +67,20 @@ public class Privacy.Indicator : Wingpanel.Indicator {
             }
             main_grid.add (settings);
 
-            connections ();
+            settings.clicked.connect (() => {
+                close ();
+                show_settings ();
+            });
         }
 
         return main_grid;
     }
 
-    public void connections () {
-        settings.clicked.connect (() => {
-            close ();
-            show_settings ();
-        });
-    }
-
     private void show_settings () {
         try {
-            Gtk.show_uri (null, "settings://security/privacy", Gdk.CURRENT_TIME);
+            AppInfo.launch_default_for_uri ("settings://security/privacy", null);
         } catch (Error e) {
-            warning ("%s\n", e.message);
+            warning ("%s", e.message);
         }
     }
 
