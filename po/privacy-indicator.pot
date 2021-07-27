@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: privacy-indicator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:47+0200\n"
+"POT-Creation-Date: 2021-07-27 12:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Indicator.vala:32
-msgid "Privacy"
-msgstr ""
-
-#: src/Indicator.vala:33
-msgid "The privacy indicator"
-msgstr ""
-
-#: src/Indicator.vala:65
+#: src/Indicator.vala:64
 msgid "Privacy Settings…"
 msgstr ""
 
