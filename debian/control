@@ -1,0 +1,22 @@
+Source: wingpanel-indicator-privacy
+Section: x11
+Priority: optional
+Maintainer: elementary, Inc. <builds@elementary.io>
+Build-Depends: debhelper (>= 10.5.1),
+               libbamf3-dev,
+               libgee-0.8-dev,
+               libgranite-dev,
+               libgtk-3-dev,
+               libgtop2-dev,
+               libwingpanel-dev,
+               meson,
+               valac
+Standards-Version: 4.5.0
+Homepage: https://github.com/elementary/wingpanel-indicator-privacy
+
+Package: wingpanel-indicator-privacy
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Enhances: wingpanel
+Description: WingPanel Privacy Indicator
+ WingPanel Privacy Indicator
