@@ -26,6 +26,9 @@ public class Privacy.Indicator : Wingpanel.Indicator {
     private Gtk.Grid main_grid;
 
     public Indicator () {
+        GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+        GLib.Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+
         Object (code_name: Wingpanel.Indicator.PRIVACY,
                 visible: false);
 
