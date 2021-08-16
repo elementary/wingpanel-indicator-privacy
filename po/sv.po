@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:47+0200\n"
+"POT-Creation-Date: 2021-07-27 12:39+0000\n"
 "PO-Revision-Date: 2018-10-19 06:24+0000\n"
 "Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/wingpanel/"
@@ -13,15 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.0.1\n"
 
-#: src/Indicator.vala:32
-msgid "Privacy"
-msgstr "Sekretess"
-
-#: src/Indicator.vala:33
-msgid "The privacy indicator"
-msgstr "Sekretessindikatorn"
-
-#: src/Indicator.vala:65
+#: src/Indicator.vala:64
 msgid "Privacy Settings…"
 msgstr "Sekretessinställningar…"
 
@@ -41,3 +33,9 @@ msgstr "Kamera"
 #: src/Backends/LocationBackend.vala:22
 msgid "Location"
 msgstr "Plats"
+
+#~ msgid "Privacy"
+#~ msgstr "Sekretess"
+
+#~ msgid "The privacy indicator"
+#~ msgstr "Sekretessindikatorn"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:47+0200\n"
+"POT-Creation-Date: 2021-07-27 12:39+0000\n"
 "PO-Revision-Date: 2018-05-31 08:29+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/wingpanel/"
@@ -13,15 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.18\n"
 
-#: src/Indicator.vala:32
-msgid "Privacy"
-msgstr "Intimitate"
-
-#: src/Indicator.vala:33
-msgid "The privacy indicator"
-msgstr "Indicatorul de confidențialitate"
-
-#: src/Indicator.vala:65
+#: src/Indicator.vala:64
 msgid "Privacy Settings…"
 msgstr "Setările de confidențialitate…"
 
@@ -41,3 +33,9 @@ msgstr "Web cam"
 #: src/Backends/LocationBackend.vala:22
 msgid "Location"
 msgstr "Locație"
+
+#~ msgid "Privacy"
+#~ msgstr "Intimitate"
+
+#~ msgid "The privacy indicator"
+#~ msgstr "Indicatorul de confidențialitate"

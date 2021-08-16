@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:47+0200\n"
+"POT-Creation-Date: 2021-07-27 12:39+0000\n"
 "PO-Revision-Date: 2019-08-30 21:23+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/wingpanel/"
@@ -13,15 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.7.1\n"
 
-#: src/Indicator.vala:32
-msgid "Privacy"
-msgstr "Privateco"
-
-#: src/Indicator.vala:33
-msgid "The privacy indicator"
-msgstr "La privateca indikilo"
-
-#: src/Indicator.vala:65
+#: src/Indicator.vala:64
 msgid "Privacy Settings…"
 msgstr "Privatecaj agordoj…"
 
@@ -41,3 +33,9 @@ msgstr "Fotilo"
 #: src/Backends/LocationBackend.vala:22
 msgid "Location"
 msgstr "Pozicio"
+
+#~ msgid "Privacy"
+#~ msgstr "Privateco"
+
+#~ msgid "The privacy indicator"
+#~ msgstr "La privateca indikilo"

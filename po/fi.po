@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:47+0200\n"
+"POT-Creation-Date: 2021-07-27 12:39+0000\n"
 "PO-Revision-Date: 2019-09-03 00:22+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/wingpanel/"
@@ -13,15 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.7.1\n"
 
-#: src/Indicator.vala:32
-msgid "Privacy"
-msgstr "Yksityisyys"
-
-#: src/Indicator.vala:33
-msgid "The privacy indicator"
-msgstr "Yksityisyysilmaisin"
-
-#: src/Indicator.vala:65
+#: src/Indicator.vala:64
 msgid "Privacy Settings…"
 msgstr "Yksityisyysasetukset…"
 
@@ -41,3 +33,9 @@ msgstr "Kamera"
 #: src/Backends/LocationBackend.vala:22
 msgid "Location"
 msgstr "Sijainti"
+
+#~ msgid "Privacy"
+#~ msgstr "Yksityisyys"
+
+#~ msgid "The privacy indicator"
+#~ msgstr "Yksityisyysilmaisin"

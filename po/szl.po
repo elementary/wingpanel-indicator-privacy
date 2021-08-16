@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:47+0200\n"
+"POT-Creation-Date: 2021-07-27 12:39+0000\n"
 "PO-Revision-Date: 2020-02-22 19:08+0000\n"
 "Last-Translator: gkkulik <g.kulik@o2.pl>\n"
 "Language-Team: Silesian <https://l10n.elementary.io/projects/wingpanel/"
@@ -14,15 +14,7 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-#: src/Indicator.vala:32
-msgid "Privacy"
-msgstr "Prywatność"
-
-#: src/Indicator.vala:33
-msgid "The privacy indicator"
-msgstr "Skaźnik prywatności"
-
-#: src/Indicator.vala:65
+#: src/Indicator.vala:64
 msgid "Privacy Settings…"
 msgstr "Sztelōnki prywatności…"
 
@@ -42,3 +34,9 @@ msgstr "Fotoaparat"
 #: src/Backends/LocationBackend.vala:22
 msgid "Location"
 msgstr "Położynie"
+
+#~ msgid "Privacy"
+#~ msgstr "Prywatność"
+
+#~ msgid "The privacy indicator"
+#~ msgstr "Skaźnik prywatności"

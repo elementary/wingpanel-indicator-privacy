@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:47+0200\n"
+"POT-Creation-Date: 2021-07-27 12:39+0000\n"
 "PO-Revision-Date: 2017-05-23 09:43+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <https://l10n.elementary.io/projects/wingpanel/"
@@ -13,15 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.14\n"
 
-#: src/Indicator.vala:32
-msgid "Privacy"
-msgstr "Privaatsus"
-
-#: src/Indicator.vala:33
-msgid "The privacy indicator"
-msgstr "Privaatsuse indikaator"
-
-#: src/Indicator.vala:65
+#: src/Indicator.vala:64
 msgid "Privacy Settings…"
 msgstr "Privaatsuse seaded…"
 
@@ -41,3 +33,9 @@ msgstr "Kaamerat"
 #: src/Backends/LocationBackend.vala:22
 msgid "Location"
 msgstr "Asukohta"
+
+#~ msgid "Privacy"
+#~ msgstr "Privaatsus"
+
+#~ msgid "The privacy indicator"
+#~ msgstr "Privaatsuse indikaator"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:47+0200\n"
+"POT-Creation-Date: 2021-07-27 12:39+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
 "Language-Team: \n"
@@ -12,15 +12,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 2.0.2\n"
 
-#: src/Indicator.vala:32
-msgid "Privacy"
-msgstr "Privasi"
-
-#: src/Indicator.vala:33
-msgid "The privacy indicator"
-msgstr "Indikator privasi"
-
-#: src/Indicator.vala:65
+#: src/Indicator.vala:64
 msgid "Privacy Settings…"
 msgstr "Pengaturan Privasi…"
 
@@ -40,3 +32,9 @@ msgstr "Kamera"
 #: src/Backends/LocationBackend.vala:22
 msgid "Location"
 msgstr "Lokasi"
+
+#~ msgid "Privacy"
+#~ msgstr "Privasi"
+
+#~ msgid "The privacy indicator"
+#~ msgstr "Indikator privasi"
