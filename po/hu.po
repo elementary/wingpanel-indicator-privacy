@@ -3,7 +3,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 12:39+0000\n"
 "PO-Revision-Date: 2021-08-23 19:43+0000\n"
-"Last-Translator: zoli111 <acszoltan111@gmail.com>\n"
+"Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/wingpanel/"
 "wingpanel-indicator-privacy/hu/>\n"
 "Language: hu\n"
@@ -20,7 +20,7 @@ msgstr "Adatvédelmi beállítások…"
 #: src/Widgets/AppList.vala:45
 #, c-format
 msgid "Apps Using %s"
-msgstr "Alkalmazások használják %s"
+msgstr "Alkalmazások, amik használják: %s"
 
 #: src/Widgets/AppListRow.vala:26
 msgid "Unknown Application"
