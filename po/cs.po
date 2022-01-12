@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 12:39+0000\n"
-"PO-Revision-Date: 2020-05-29 15:11+0000\n"
+"PO-Revision-Date: 2022-01-12 19:06+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/wingpanel/"
 "wingpanel-indicator-privacy/cs/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: src/Indicator.vala:64
 msgid "Privacy Settings…"
@@ -20,7 +20,7 @@ msgstr "Nastavení soukromí…"
 #: src/Widgets/AppList.vala:45
 #, c-format
 msgid "Apps Using %s"
-msgstr "Aplikace používá %s"
+msgstr "Aplikace používající %s"
 
 #: src/Widgets/AppListRow.vala:26
 msgid "Unknown Application"
