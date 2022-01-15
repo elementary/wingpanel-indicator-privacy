@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 12:39+0000\n"
-"PO-Revision-Date: 2020-01-03 22:07+0000\n"
-"Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
+"PO-Revision-Date: 2022-01-15 17:43+0000\n"
+"Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/wingpanel/"
 "wingpanel-indicator-privacy/nl/>\n"
 "Language: nl\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: src/Indicator.vala:64
 msgid "Privacy Settings…"
@@ -20,11 +20,11 @@ msgstr "Privacyinstellingen…"
 #: src/Widgets/AppList.vala:45
 #, c-format
 msgid "Apps Using %s"
-msgstr "Toepassingen gebruik makend van %s"
+msgstr "Applicaties dat gebruik maken van %s"
 
 #: src/Widgets/AppListRow.vala:26
 msgid "Unknown Application"
-msgstr "Onbekende toepassing"
+msgstr "Onbekende applicatie"
 
 #: src/Backends/CameraBackend.vala:22
 msgid "Camera"
