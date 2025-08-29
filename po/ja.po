@@ -2,20 +2,20 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 12:39+0000\n"
-"PO-Revision-Date: 2019-08-29 17:23+0000\n"
+"PO-Revision-Date: 2025-08-30 22:55+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://l10n.elementary.io/projects/wingpanel/"
+"Language-Team: Japanese <https://l10n.elementaryos.org/projects/wingpanel/"
 "wingpanel-indicator-privacy/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: src/Indicator.vala:64
 msgid "Privacy Settings…"
-msgstr "プライバシーの設定…"
+msgstr "プライバシー設定…"
 
 #: src/Widgets/AppList.vala:45
 #, c-format
