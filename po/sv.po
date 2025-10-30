@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 12:39+0000\n"
-"PO-Revision-Date: 2025-10-22 05:31+0000\n"
+"PO-Revision-Date: 2025-10-31 12:55+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <https://l10n.elementaryos.org/projects/wingpanel/"
 "wingpanel-indicator-privacy/sv/>\n"
@@ -15,7 +15,7 @@ msgstr ""
 
 #: src/Indicator.vala:64
 msgid "Privacy Settings…"
-msgstr "Sekretessinställningar…"
+msgstr "Inställningar för integritet…"
 
 #: src/Widgets/AppList.vala:45
 #, c-format
