@@ -1,7 +1,7 @@
 Source: wingpanel-indicator-privacy
 Section: x11
 Priority: optional
-Maintainer: elementary, Inc. <builds@elementary.io>
+Maintainer: elementary <builds@elementary.io>
 Build-Depends: debhelper (>= 10.5.1),
                libbamf3-dev,
                libgee-0.8-dev,
