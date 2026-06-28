@@ -2,12 +2,20 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 12:39+0000\n"
+"PO-Revision-Date: 2026-06-29 09:56+0000\n"
+"Last-Translator: Jim Spentzos <jimspentzos2000@gmail.com>\n"
+"Language-Team: Greek <https://l10n.elementaryos.org/projects/wingpanel/"
+"wingpanel-indicator-privacy/el/>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.5\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: src/Indicator.vala:64
 msgid "Privacy Settings…"
-msgstr ""
+msgstr "Ρυθμίσεις απορρήτου…"
 
 #: src/Widgets/AppList.vala:45
 #, c-format
@@ -16,12 +24,12 @@ msgstr ""
 
 #: src/Widgets/AppListRow.vala:26
 msgid "Unknown Application"
-msgstr ""
+msgstr "Άγνωστη εφαρμογή"
 
 #: src/Backends/CameraBackend.vala:22
 msgid "Camera"
-msgstr ""
+msgstr "Κάμερα"
 
 #: src/Backends/LocationBackend.vala:22
 msgid "Location"
-msgstr ""
+msgstr "Τοποθεσία"
